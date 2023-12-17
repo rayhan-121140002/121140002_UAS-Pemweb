@@ -1,0 +1,175 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    height: 100%; /* Memastikan elemen html dan body memenuhi tinggi viewport */
+    min-height: 100vh; /* Memastikan body memiliki tinggi minimal viewport */
+    background: linear-gradient(#9BBEC8, #164863);
+    background-repeat: no-repeat; /* Mencegah background berulang */
+    background-attachment: fixed; /* Membuat background tetap terkunci saat di-scroll */
+    background-size: cover; /* Menutupi seluruh elemen */
+  
+}
+  
+  .navbar {
+    background-color: #164863; /* Warna biru gelap untuk latar belakang navbar */
+    height: 50px; /* Sesuaikan dengan tinggi navbar Anda */
+    width: 100%;
+    position: fixed; /* Posisi tetap */
+    top: 0;
+    overflow: hidden;
+    z-index: 1000; /* Pastikan tetap di atas */
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .brand-name {
+    margin-left: 20px;
+    color: #fff; /* Teks berwarna putih untuk nama merek */
+    font-size: 1.5em; /* Ukuran font sedikit lebih besar untuk nama merek */
+  }
+  
+  .navbar nav ul {
+    list-style-type: none; /* Tanpa bullet */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Daftar horizontal */
+    align-items: center; /* Tengahkan item secara vertikal */
+    height: 100%;
+  }
+  
+  .navbar nav ul li {
+    padding: 0 20px; /* Jarak antar item menu */
+  }
+  
+  .navbar nav ul li a {
+    text-decoration: none; /* Tanpa garis bawah */
+    color: #fff; /* Teks berwarna putih untuk link */
+    display: block;
+    height: 100%;
+    line-height: 50px; /* Tengahkan teks secara vertikal */
+    transition: background-color 0.3s; /* Transisi yang halus untuk efek hover */
+  }
+  
+  /* Gaya untuk link aktif/saat ini */
+  .navbar nav ul li a.active,
+  .navbar nav ul li a:hover {
+    background-color: #427D9D; /* Biru medium untuk keadaan aktif/hover */
+    color: #fff;
+  }
+  
+  /* Gaya untuk konten utama */
+  main {
+    padding-top: 60px; /* Buat ruang untuk navbar */
+    padding-bottom: 40px; /* Buat ruang untuk navbar */
+    /* color: #164863; Teks biru gelap untuk teks konten utama */
+    /* background-color: #9BBEC8; Biru muda untuk latar belakang konten utama */
+  }
+  
+  .container{
+    margin: 20px;
+    padding: 20px;
+    background-color: #DDF2FD;
+    color: #164863;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+  table{
+    width: 100%;
+    min-width: 1000px;
+    
+}
+
+#data-film{
+    min-width: 700px;
+}
+
+.table-overlay{
+  overflow-x:overlay;
+}
+
+table td{
+    padding: 5px;
+}
+
+table, td, th, td{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+tr{
+    text-align: center;
+}
+
+tr:nth-child(odd):not(.header-table) {
+    background-color: #DBE2EF;
+}
+tr:nth-child(even):not(.header-table) {
+    background-color: #dbefe4;
+}
+
+.header-table{
+    background-color: #427D9D;
+    color:white;
+}
+
+.header-table th{
+    padding: 10px;
+}
+
+/* Style untuk halaman form */
+input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], select, textarea {
+  display: block;
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+label {
+  display: block;
+  padding: 12px 12px 12px 0;
+}
+
+input[type=submit], button, .btn-primary {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #427D9D;
+  transition: background-color 0.3s;
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+.btn-primary{
+  display: inline-block;
+}
+
+input[type=submit]:hover, button:hover, .btn-primary:hover {
+  background-color: #164863;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+}
