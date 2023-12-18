@@ -5,6 +5,11 @@ require 'Auth.php';
 
 $auth = new Auth($conn);
 
+if ($auth->checkToken()) {
+  header("Location: index.php");
+  exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];

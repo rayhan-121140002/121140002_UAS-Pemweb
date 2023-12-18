@@ -5,6 +5,11 @@ require 'Auth.php';
 
 $auth = new Auth($conn);
 
+if ($auth->checkToken()) {
+  header("Location: index.php");
+  exit();
+}
+
 $message = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

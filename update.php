@@ -21,8 +21,6 @@ if (isset($_GET["id"]) and (isset($_GET["action"]) and $_GET["action"] == "form"
     $query = $conn->prepare("SELECT * FROM film WHERE id = ?");
     $query->execute([$id]);
     $film = $query->fetch(PDO::FETCH_OBJ);
-    // Tidak ada array genre atau sutradara yang serupa dengan kode_prodi,
-    // jadi bagian ini dihilangkan.
   }
 } else if (isset($_GET["id"]) and (isset($_GET["action"]) and $_GET["action"] == "update")) {
   if (isset($_POST["judul"]) and isset($_POST["genre"]) and isset($_POST["penulis"]) and isset($_POST["sutradara"])) {
